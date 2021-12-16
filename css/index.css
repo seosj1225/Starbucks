@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;box-sizing: border-box;}
+.cf::after{content:'';display:block; clear:both;}
+img{max-width:100%; vertical-align: middle;}
+ul{list-style:none;}
+a {color:inherit;text-decoration: none;}
+.blind{
+    position:absolute; width:1px; height:1px;
+    overflow:hidden; text-indent:-9999px;
+    font-size:0px; line-height:0px;
+}
+
+/* 헤더 스타일 시작 */
+#header{
+
+    position:fixed; width:100%; top:0; left:0;
+    /* position:fixed와 position:absolute를 사용하면 블락요소의 기본값인 width:100%가 삭제되어 함께 써줘야함 */
+    z-index:2;
+    padding:0 40px; background:#fff;
+    box-shadow:0 1px 3px 0 rgba(0,0,0,.3);
+}
+
+#header h1 {float:left; width:50px; margin-right:40px; margin-top:20px}
+#header #nav {
+    float:right;width:calc(100% - 90px);
+    /* calc(100% - 90px) :마이너스 기호 앞뒤에 반드시 띄워쓰기 할 것 */
+    position:relative;
+}
+#header #nav .depth1 >li:hover{
+    color:#00754a;
+}
+#header #nav .depth1>li {display:inline-block;}
+#header #nav .depth1>li>a{
+    display:inline-block; padding:40px 0; font-size:14px; font-weight:bold;
+}
+#header #nav .depth1>li+li>a{padding-left:24px;}
+
+#header #nav .membership {
+    position:absolute; top:50%;right:0; margin-top:-17px;
+}
+#header #nav .membership a {
+    font-size:14px; padding:6px 16px 8px;
+    border:1px solid #000; border-radius: 50px; font-weight: bold;
+}
+
+#header #nav .membership a:first-child{
+    margin-right:40px; border:none;
+    padding:7px 0px;
+}
+#header #nav .membership a:first-child:hover{color:#00754a;}
+#header #nav .membership a:nth-child(2){margin-right:16px; transition:all 0.5s;}
+#header #nav .membership a:nth-child(2):hover{background:rgba(0,0,0,0.06);}
+#header #nav .membership a:nth-child(3){background:#000; color:#fff; transition:all 0.5s;}
+#header #nav .membership a:nth-child(3):hover{background:rgba(0,0,0,0.7);}
+/* 헤더 스타일 끝 */
+
+/* 메인구역 스타일 시작 */
+#main{overflow:hidden; padding-top:100px;}
+#main .startorder {
+    position:fixed;
+    bottom:80px;
+    right:80px;
+    z-index:999;
+}
+#main .startorder a {
+    display:block;
+    font-size:19px;
+    padding:18px 24px;
+    background:#00a862;
+    color:#fff;
+    font-weight:bold;
+    border-radius:50px;
+    box-shadow: 0 0 6px rgb(0,0,0,0.24), 0 8px 12px rgb(0,0,0,0.14);
+
+}
+
+#main .welcome-msg {
+    position:fixed;
+    width:40%;
+    left:0; 
+    height:100%;
+    background:#fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.24), 0 4px 4px rgba(0,0,0,.12);
+}
+
+#main .welcome-msg .text{
+    padding:0 131px;
+    font-size:28px;
+    font-weight:bold; /*이모지 색깔변경: bold적용 */
+    padding-top:40vh; /*vh , vw */
+}
+#main #container { 
+    width:60%; 
+    margin-left:40%; 
+    padding:20px 0;
+}
+
+#container .rewards {
+    padding:0 40px;
+}
+#container .rewards h2 {
+    font-size:14px; margin-bottom:20px;
+}
+#container .rewards ul {overflow:hidden;}
+#container .rewards li {float:left; width:32.3333%;}
+#container .rewards li:nth-child(2) {margin:0 1.5%;}
+#container .rewards li img{
+    border-radius:15px;
+}
+#container .rewards li p {
+    font-size:19px; padding-top:24px;
+    letter-spacing: -0.5px; text-align: justify;
+}
+
+#container .btn {
+    padding:24px 0;     
+}
+#container .btn a {
+    font-size:14px; padding:6px 16px 8px;
+    border:1px solid #000; border-radius: 50px; font-weight: bold; display:inline-block;
+}
+#container .btn a:nth-child(1){
+    background:#000;color:#fff; transition:all 0.5s;
+}
+#container .btn a:first-child:hover{background:rgba(0,0,0,0.7);}
+#container .btn a:last-child{transition:all 0.5s;}
+#container .btn a:last-child:hover{background:rgba(0,0,0,0.06);}
+
+
+
+
+#container .order {
+    background: #f9f9f9; padding:40px 0 80px;
+}
+#container .order > div {
+    border-radius:30px;
+    background:#fff;
+    width:500px;
+    margin:0 auto 20px;
+    overflow:hidden;
+    box-shadow: 0 0 0.5px 0 rgba(0,0,0,0.14), 0 1px 1px 0 rgba(0,0,0,0.24);
+}
+#container .order .order1 {
+    padding:20px 20px 20px;
+
+}
+#container .order .order1 > div:first-child{
+    position:relative; padding-bottom:16px;
+}
+#container .order .order1 .answer {
+    width:80%; font-size:28px; line-height:1.5em;
+    font-weight:bold;
+}
+#container .order .order1 .beta {
+    position:absolute; top:10px; right:0; font-size:13px;
+    color:#dd92c0; letter-spacing:0.5em; font-weight:bold;
+}
+
+#container .order .order1 > div:nth-child(2) {
+    font-size:16px; padding:16px 0;
+    border-top:1px solid #999;
+}
+#container .order .order1 > div:nth-child(3) a {
+    display:block;
+    background:#d4e9e2;
+    border-radius:20px; position:relative;
+    padding:30px 16px; font-size:19px; line-height:1.5em;
+    overflow:hidden;
+}
+#container .order .order1 >div:nth-child(3) a:first-child{
+    margin-bottom:20px;
+}
+
+#container .order .order1 >div:nth-child(3) a strong {
+    display:block;
+}
+#container .order .order1 >div:nth-child(3) a img {
+    position:absolute; bottom:-10px; right:0;
+}
+#container .order .order1 >div:nth-child(3) a:first-child img {
+    width:63px; right:20px;
+}
+#container .order .order1 >div:nth-child(3) a:last-child img{
+    width:85px; right:-5px;
+}
+
+#container .order .buy > div {
+    padding:24px;
+}
+
+#container .order .buy > div h3 {
+    font-size:19px;
+}
+#container .order .buy > div p {
+    font-size:16px;
+    padding:16px 0;
+}
+
+#container .order .buy > div a {
+    display:inline-block;
+    font-size:16px;
+    color:#00754a;
+    border:1px solid #00754a;
+    border-radius:50px;
+    padding:6px 16px 8px;
+    transition:all 0.5s;
+}
+
+#container .order .buy > div a:hover {
+    background:rgba(235,244,241);
+}
+
+
+
+/* company-info 구역 */
+
+#container .company-info  {
+    padding: 48px 40px 32px; background:#fff;
+}
+#container .company-info .depth1 {
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+#container .company-info .depth1 > li{
+    margin-bottom:20px;
+}
+#container .company-info .depth1 > li:hover .depth2{
+    display:block;
+}
+
+
+
+#container .company-info .depth1 > li >a {
+    display:block; font-size:19px;padding:20px 0;
+    position:relative;
+}
+
+#container .company-info .depth1 > li >a::after{
+    content:'\f078';
+    font-family:'Font Awesome 5 Free';
+    font-weight:900;
+    position:absolute; top:50%;right:15.5px;
+    margin-top:-9.5px;
+    transition:all 0.5s;
+}
+#container .company-info .depth1 > li >a:hover::after{
+    transform:rotate(-180deg);
+    /* content:'\f077'; */
+}
+
+
+
+#container .company-info .depth1 > li >a::before{
+    content:'';
+    position:absolute; top:50%; right:0;
+    margin-top:-25px;
+    width:50px; height:50px;
+    border-radius:50%
+}
+#container .company-info .depth1 > li >a:hover::before{
+    background:#ddd;
+    transition:all 0.5s;
+}
+
+
+/* #container .footer .sns a::after {
+    content:'';
+    position:absolute;
+    left:50%;  bottom:50%;
+    border-radius:50%; background:#ddd;
+    z-index:-1; transition:all 0.3s;
+}
+
+#container .footer .sns a:hover::after{
+    top:-8px; left:-8px; right:-8px; bottom:-8px;
+} */
+
+
+
+
+
+
+
+
+
+#container .company-info .depth2 {
+    display:none;
+}
+#container .company-info .depth2 > li{
+    margin-bottom:8px;   
+}
+#container .company-info .depth2 > li > a:hover{
+  color:#000;
+}
+#container .company-info .depth2 > li > a{
+    padding:8px 0; display:inline-block;
+    font-size:16px;
+    color:rgba(0,0,0,0.58);
+}
+
+/* footer 영역 시작 */
+
+#container .footer {
+    padding:0px 40px 100px;
+}
+#container .footer .sns a {
+    display:inline-block;
+    width:32px; height:32px; line-height:30px;
+    border-radius:50%;
+    background:#000; color:#fff;
+    font-size:18px;
+    text-align:center; vertical-align: middle;
+    margin-bottom:20px; position:relative;
+    margin-top:10px;
+}
+#container .footer .sns a::after {
+    content:'';
+    position:absolute;
+    /* width:48px; height:48px; */
+    top:50%; left:50%; right:50%; bottom:50%;
+    border-radius:50%; background:#ddd;
+    /* margin-top:-24px; margin-left:-24px; */
+    z-index:-1; transition:all 0.3s;
+}
+
+#container .footer .sns a:hover::after{
+    top:-8px; left:-8px; right:-8px; bottom:-8px;
+}
+
+#container .footer .sns a:first-child {
+    width:32px; height:32px; background:#fff; color:#000;
+    font-size:33px;
+    text-align:center;
+}
+#container .footer .sns a+a{
+    margin-left:15px;
+}
+#container .footer .bmenu li a {
+    font-size:16px;
+    padding:8px 0;
+    display:inline-block;
+    margin-bottom: 4px;
+}
+#container .footer .bmenu li a:hover{
+    text-decoration: underline;
+}
+#container .footer .copyright {
+    font-size: 14px;
+    padding:16px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
